@@ -1,5 +1,7 @@
 # Cronjobs
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/loeffel-io/cronjob)](https://goreportcard.com/report/github.com/loeffel-io/cronjob)
+
 Simple package to setup some cronjobs based on [gopkg.in/robfig/cron.v2](https://godoc.org/gopkg.in/robfig/cron.v2)
 
 ### Useful links
