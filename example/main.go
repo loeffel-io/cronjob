@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/loeffel-io/cronjob"
 	"log"
 	"time"
-	"github.com/loeffel-io/cronjob"
 )
 
 var cronjobs = cronjob.Cronjobs{
