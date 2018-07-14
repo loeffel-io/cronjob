@@ -1,6 +1,11 @@
 # Cronjobs
 
-Simple package to setup some cronjobs
+Simple package to setup some cronjobs based on [gopkg.in/robfig/cron.v2](https://godoc.org/gopkg.in/robfig/cron.v2)
+
+### Useful links
+
+- [CRON Expression Format](https://godoc.org/gopkg.in/robfig/cron.v2#hdr-CRON_Expression_Format)
+- [crontab.guru](https://crontab.guru)
 
 ### Example
 
