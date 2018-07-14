@@ -1,10 +1,3 @@
-# Cronjobs
-
-Simple package to setup some cronjobs
-
-### Example
-
-```go
 package main
 
 import (
@@ -13,7 +6,6 @@ import (
 	"github.com/loeffel-io/cronjob"
 )
 
-// Cronjobs config
 var cronjobs = cronjob.Cronjobs{
 	Cronjobs: []cronjob.Cronjob{
 		{
@@ -46,4 +38,3 @@ func main() {
 		time.Sleep(5 * time.Second)
 	}
 }
-```

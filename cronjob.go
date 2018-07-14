@@ -15,7 +15,7 @@ type Cronjob struct {
 	Call     func()
 }
 
-func SetupCronjobs(cronjobs Cronjobs) {
+func Setup(cronjobs Cronjobs) {
 	for _, cronjob := range cronjobs.Cronjobs {
 		cronSetup := cron.New()
 		_, err := cronSetup.AddFunc(cronjob.Interval, cronjob.Call)
