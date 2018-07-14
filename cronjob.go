@@ -1,8 +1,8 @@
 package cronjob
 
 import (
-	"gopkg.in/robfig/cron.v2"
 	"github.com/getsentry/raven-go"
+	"gopkg.in/robfig/cron.v2"
 	"log"
 )
 
