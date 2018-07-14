@@ -52,3 +52,20 @@ func main() {
 	}
 }
 ```
+
+### Sentry support
+
+This package supports [sentry.io](https://sentry.io) real time error reporting.
+More informations: [Sentry golang docs](https://docs.sentry.io/clients/go)
+
+```go
+import "github.com/getsentry/raven-go"
+
+func init() {
+	// Setup sentry
+    raven.SetDSN("https://<key>:<secret>@sentry.io/<project>")
+    
+	// Setup cronjobs
+	cronjob.Setup(cronjobs)
+}
+```
