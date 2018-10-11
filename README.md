@@ -1,5 +1,6 @@
 # Cronjobs
 
+[![GoDoc](https://godoc.org/github.com/loeffel-io/cronjob?status.svg)](https://godoc.org/github.com/loeffel-io/cronjob)
 [![Go Report Card](https://goreportcard.com/badge/github.com/loeffel-io/cronjob)](https://goreportcard.com/report/github.com/loeffel-io/cronjob)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
