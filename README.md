@@ -1,6 +1,7 @@
 # Cronjobs
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/loeffel-io/cronjob)](https://goreportcard.com/report/github.com/loeffel-io/cronjob)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 Simple package to setup some cronjobs based on [gopkg.in/robfig/cron.v2](https://godoc.org/gopkg.in/robfig/cron.v2)
 
@@ -52,23 +53,5 @@ func main() {
 		log.Println("endless loop is running ..")
 		time.Sleep(5 * time.Second)
 	}
-}
-```
-
-### Sentry support
-
-This package supports [sentry.io](https://sentry.io) real time error reporting.
-More informations: [Sentry golang docs](https://docs.sentry.io/clients/go)
-
-```go
-package main
-
-import "github.com/getsentry/raven-go"
-
-func init() {
-    // Setup sentry
-    raven.SetDSN("https://<key>:<secret>@sentry.io/<project>")
-    
-    // Setup cronjobs ...
 }
 ```

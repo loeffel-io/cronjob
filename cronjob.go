@@ -1,9 +1,7 @@
 package cronjob
 
 import (
-	"github.com/getsentry/raven-go"
 	"gopkg.in/robfig/cron.v2"
-	"log"
 )
 
 type Cronjobs struct {
@@ -15,16 +13,18 @@ type Cronjob struct {
 	Call     func()
 }
 
-func Setup(cronjobs Cronjobs) {
+// Setup starts cronjobs
+func Setup(cronjobs Cronjobs) error {
 	for _, cronjob := range cronjobs.Cronjobs {
 		cronSetup := cron.New()
 		_, err := cronSetup.AddFunc(cronjob.Interval, cronjob.Call)
 
 		if err != nil {
-			raven.CaptureError(err, nil)
-			log.Fatal(err.Error())
+			return err
 		}
 
 		cronSetup.Start()
 	}
+
+	return nil
 }
