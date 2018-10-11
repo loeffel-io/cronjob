@@ -28,31 +28,20 @@ var cronjobs = cronjob.Cronjobs{
 		{
 			Interval: "0 */1 * * * *", // @every 1m
 			Call: func() {
-				test()
+				log.Println("cronjob is running ..")
 			},
 		},
 		{
 			Interval: "0 */3 * * * *", // @every 3m
 			Call: func() {
-				test()
+				log.Println("cronjob is running ..")
 			},
 		},
 	},
 }
 
-func test() {
-	log.Println("cronjob is running ..")
-}
-
 func init() {
 	// Setup cronjobs
 	cronjob.Setup(cronjobs)
-}
-
-func main() {
-	for {
-		log.Println("endless loop is running ..")
-		time.Sleep(5 * time.Second)
-	}
 }
 ```
