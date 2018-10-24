@@ -28,3 +28,16 @@ func Setup(cronjobs Cronjobs) error {
 
 	return nil
 }
+
+// Start stars single cronjob
+func (cronjob *Cronjob) Start() (*cron.Cron, error) {
+	cronSetup := cron.New()
+
+	if _, err := cronSetup.AddFunc(cronjob.Interval, cronjob.Call); err != nil {
+		return nil, err
+	}
+
+	cronSetup.Start()
+
+	return cronSetup, nil
+}
